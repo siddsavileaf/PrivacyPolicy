@@ -1,33 +1,37 @@
-
-</html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <meta
-    name="description"
-    content="Geonnect Privacy Policy explaining how we collect, use, store, and protect your personal information."
-  />
-
+  <meta name="description" content="Geonnect Privacy Policy explaining how we collect, use, store, and protect your personal information." />
   <title>Privacy Policy | Geonnect</title>
-
+  
+  <!-- Alkatra Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&display=swap" rel="stylesheet">
+  
   <style>
     :root {
-      --primary: #2563eb;
-      --primary-dark: #1d4ed8;
-      --background: #f4f7fb;
-      --card: #ffffff;
-      --text: #172033;
-      --muted: #667085;
-      --border: #e4e7ec;
-      --soft-blue: #eff6ff;
-      --success: #16a34a;
-      --shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
-      --radius: 20px;
+      --primary: #C2E96A;
+      --primary-strong: #A9D44E;
+      --primary-soft: #F3FADF;
+      --ink: #171A14;
+      --text: #2D3328;
+      --muted: #687060;
+      --background: #F6F8F2;
+      --surface: #FFFFFF;
+      --surface-soft: #FAFBF7;
+      --border: #E5E9DE;
+      --border-strong: #D8DDCF;
+      --link: #527300;
+      --header: #151A11;
+      --shadow-sm: 0 8px 24px rgba(23, 26, 20, 0.06);
+      --shadow-md: 0 18px 50px rgba(23, 26, 20, 0.08);
+      --radius-sm: 12px;
+      --radius-md: 18px;
+      --radius-lg: 24px;
     }
 
-    * {
+    *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -35,42 +39,71 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 24px;
     }
 
     body {
       min-height: 100vh;
-      font-family:
-        Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial,
-        sans-serif;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       color: var(--text);
-      background:
-        radial-gradient(
-          circle at top left,
-          rgba(37, 99, 235, 0.1),
-          transparent 30%
-        ),
-        var(--background);
-      line-height: 1.7;
+      background: var(--background);
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
     a {
-      color: var(--primary);
+      color: var(--link);
       text-decoration: none;
+      transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
     }
 
     a:hover {
-      text-decoration: underline;
+      color: #344B00;
+    }
+
+    a:focus-visible {
+      outline: 3px solid rgba(194, 233, 106, 0.55);
+      outline-offset: 3px;
+      border-radius: 8px;
     }
 
     .page-header {
-      padding: 24px 20px 70px;
-      color: #ffffff;
-      background:
-        linear-gradient(
-          135deg,
-          rgba(29, 78, 216, 0.98),
-          rgba(37, 99, 235, 0.9)
-        );
+      position: relative;
+      overflow: hidden;
+      padding: 24px 20px 92px;
+      color: #FFFFFF;
+      background: var(--header);
+      border-bottom: 1px solid rgba(194, 233, 106, 0.18);
+    }
+
+    .page-header::before {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      right: -160px;
+      top: -230px;
+      border-radius: 50%;
+      background: rgba(194, 233, 106, 0.10);
+      filter: blur(2px);
+      pointer-events: none;
+    }
+
+    .page-header::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 3px;
+      background: var(--primary);
+    }
+
+    .nav,
+    .hero {
+      position: relative;
+      z-index: 1;
     }
 
     .nav {
@@ -86,45 +119,32 @@
       display: inline-flex;
       align-items: center;
       gap: 11px;
-      color: #ffffff;
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: -0.4px;
+      color: #FFFFFF;
+      font-family: 'Alkatra', cursive;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.6px;
     }
 
     .brand:hover {
-      text-decoration: none;
+      color: #FFFFFF;
     }
 
     .brand-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
       display: grid;
       place-items: center;
-      background: rgba(255, 255, 255, 0.16);
-      border: 1px solid rgba(255, 255, 255, 0.24);
-      backdrop-filter: blur(10px);
-    }
-
-    .back-link {
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      padding: 10px 15px;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    .back-link:hover {
-      text-decoration: none;
-      background: rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      font-size: 24px;
+      box-shadow: inset 0 0 0 1px rgba(194, 233, 106, 0.06);
     }
 
     .hero {
-      width: min(860px, 100%);
-      margin: 58px auto 0;
+      width: min(790px, 100%);
+      margin: 72px auto 0;
       text-align: center;
     }
 
@@ -132,232 +152,294 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 7px 13px;
-      margin-bottom: 17px;
-      font-size: 13px;
-      font-weight: 700;
+      padding: 8px 14px;
+      margin-bottom: 22px;
+      color: var(--primary);
+      background: rgba(194, 233, 106, 0.09);
+      border: 1px solid rgba(194, 233, 106, 0.24);
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.14);
-      border: 1px solid rgba(255, 255, 255, 0.25);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
     }
 
     .hero h1 {
-      margin-bottom: 16px;
-      font-size: clamp(34px, 6vw, 58px);
-      line-height: 1.1;
-      letter-spacing: -1.8px;
+      margin-bottom: 18px;
+      color: #FFFFFF;
+      font-size: clamp(40px, 7vw, 68px);
+      line-height: 1.02;
+      letter-spacing: -0.055em;
     }
 
     .hero p {
       max-width: 700px;
       margin: 0 auto;
-      color: rgba(255, 255, 255, 0.86);
-      font-size: 17px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: clamp(15px, 2vw, 18px);
     }
 
     .updated-date {
-      margin-top: 20px;
-      color: rgba(255, 255, 255, 0.72);
-      font-size: 14px;
+      margin-top: 24px;
+      color: rgba(255, 255, 255, 0.50);
+      font-size: 13px;
+      letter-spacing: 0.01em;
     }
 
     .page-layout {
       width: min(1120px, calc(100% - 32px));
-      margin: -36px auto 60px;
+      margin: -44px auto 72px;
       display: grid;
-      grid-template-columns: 270px minmax(0, 1fr);
+      grid-template-columns: 272px minmax(0, 1fr);
       gap: 24px;
       align-items: start;
+      position: relative;
+      z-index: 2;
     }
 
     .sidebar,
     .content-card {
-      background: var(--card);
-      border: 1px solid rgba(228, 231, 236, 0.9);
-      box-shadow: var(--shadow);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
     }
 
     .sidebar {
       position: sticky;
       top: 20px;
-      padding: 22px;
-      border-radius: var(--radius);
+      padding: 22px 18px;
+      border-radius: var(--radius-md);
     }
 
     .sidebar h2 {
-      margin-bottom: 14px;
+      margin: 0 10px 14px;
+      color: var(--ink) !important;
       font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
     }
 
     .sidebar nav {
       display: grid;
-      gap: 4px;
+      gap: 3px;
     }
 
-    .sidebar a {
+    .sidebar nav a {
       display: block;
-      padding: 9px 11px;
+      padding: 9px 10px;
       color: var(--muted);
-      font-size: 14px;
+      border: 1px solid transparent;
       border-radius: 10px;
-      transition: 0.2s ease;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.35;
     }
 
-    .sidebar a:hover {
-      color: var(--primary);
-      text-decoration: none;
-      background: var(--soft-blue);
+    .sidebar nav a:hover {
+      color: var(--ink);
+      background: var(--primary-soft);
+      border-color: rgba(194, 233, 106, 0.42);
     }
 
     .content-card {
-      padding: clamp(25px, 5vw, 52px);
-      border-radius: 24px;
+      padding: clamp(28px, 5vw, 58px);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
     }
 
     .summary-box {
-      margin-bottom: 38px;
-      padding: 20px;
-      border-radius: 16px;
-      background: var(--soft-blue);
-      border: 1px solid #dbeafe;
+      margin-bottom: 44px;
+      padding: 20px 22px;
+      color: var(--text);
+      background: var(--primary-soft);
+      border: 1px solid rgba(169, 212, 78, 0.42);
+      border-radius: var(--radius-sm);
     }
 
     .summary-box strong {
-      color: var(--primary-dark);
-    }
-
-    .policy-section {
-      padding: 10px 0 31px;
-      scroll-margin-top: 25px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .policy-section:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    .policy-section + .policy-section {
-      padding-top: 32px;
-    }
-
-    .section-number {
-      width: 35px;
-      height: 35px;
-      flex: 0 0 35px;
-      display: grid;
-      place-items: center;
-      color: var(--primary);
-      font-size: 14px;
-      font-weight: 800;
-      border-radius: 11px;
-      background: var(--soft-blue);
+      color: var(--ink);
     }
 
     .section-heading {
       display: flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 15px;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .section-number {
+      width: 40px;
+      height: 40px;
+      flex: 0 0 40px;
+      display: grid;
+      place-items: center;
+      color: #344500;
+      background: var(--primary);
+      border-radius: 11px;
+      font-size: 13px;
+      font-weight: 900;
+      box-shadow: 0 7px 18px rgba(194, 233, 106, 0.25);
+    }
+
+    .policy-section {
+      padding: 8px 0 36px;
+      scroll-margin-top: 26px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .policy-section + .policy-section {
+      padding-top: 36px;
+    }
+
+    .policy-section:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
     }
 
     .policy-section h2 {
-      font-size: 23px;
+      color: var(--ink);
+      font-size: clamp(23px, 3vw, 29px);
+      font-weight: 780;
       line-height: 1.25;
-      letter-spacing: -0.4px;
+      letter-spacing: -0.035em;
     }
 
     .policy-section h3 {
-      margin: 22px 0 7px;
+      margin: 24px 0 8px;
+      color: var(--ink);
       font-size: 17px;
+      line-height: 1.35;
     }
 
     .policy-section p {
-      margin-bottom: 13px;
-      color: #475467;
+      margin-bottom: 18px;
+      color: var(--text);
     }
 
     .policy-section ul {
-      margin: 10px 0 15px 20px;
-      color: #475467;
+      margin: 10px 0 18px;
+      padding-left: 0;
+      color: var(--text);
+      list-style: none;
     }
 
     .policy-section li {
-      margin-bottom: 8px;
-      padding-left: 4px;
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: 24px;
+    }
+
+    .policy-section li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 0.72em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--primary-strong);
+      transform: translateY(-50%);
     }
 
     .notice {
-      margin-top: 17px;
-      padding: 16px 18px;
+      margin-top: 20px;
+      padding: 18px 20px;
+      color: var(--text);
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
       border-left: 4px solid var(--primary);
-      border-radius: 10px;
-      background: #f8fafc;
-      color: #475467;
+      border-radius: var(--radius-sm);
     }
 
     .contact-card {
-      margin-top: 19px;
-      padding: 21px;
-      border-radius: 16px;
-      background: #f8fafc;
+      margin-top: 20px;
+      padding: 21px 22px;
+      background: var(--surface-soft);
       border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+
+    .contact-card strong {
+      color: var(--ink);
     }
 
     .contact-row {
       display: flex;
+      align-items: flex-start;
       gap: 10px;
-      margin-top: 8px;
-      color: #475467;
+      margin-top: 10px;
+      color: var(--text);
+      overflow-wrap: anywhere;
     }
 
     footer {
-      padding: 0 20px 38px;
-      text-align: center;
+      padding: 0 20px 42px;
       color: var(--muted);
-      font-size: 14px;
+      text-align: center;
+      font-size: 13px;
     }
 
     @media (max-width: 860px) {
       .page-header {
-        padding-bottom: 60px;
+        padding-bottom: 72px;
+      }
+
+      .hero {
+        margin-top: 54px;
       }
 
       .page-layout {
         grid-template-columns: 1fr;
-        margin-top: -25px;
+        margin-top: -32px;
       }
 
       .sidebar {
         position: static;
+        padding: 16px;
+      }
+
+      .sidebar h2 {
+        margin: 0 4px 12px;
       }
 
       .sidebar nav {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        padding: 0 2px 4px;
+        scrollbar-width: thin;
+      }
+
+      .sidebar nav a {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        background: var(--surface-soft);
+        border-color: var(--border);
       }
     }
 
     @media (max-width: 560px) {
       .page-header {
-        padding-left: 16px;
-        padding-right: 16px;
-      }
-
-      .nav {
-        align-items: flex-start;
+        padding: 18px 16px 62px;
       }
 
       .brand {
-        font-size: 19px;
+        font-size: 22px;
       }
 
-      .back-link {
-        padding: 8px 11px;
-        font-size: 12px;
+      .brand-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 21px;
       }
 
       .hero {
-        margin-top: 42px;
+        margin-top: 46px;
+        text-align: left;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+        letter-spacing: -0.05em;
       }
 
       .hero p {
@@ -366,46 +448,63 @@
 
       .page-layout {
         width: min(100% - 20px, 1120px);
-      }
-
-      .sidebar nav {
-        grid-template-columns: 1fr;
+        gap: 14px;
       }
 
       .content-card {
-        padding: 23px 18px;
+        padding: 26px 19px;
         border-radius: 18px;
       }
 
+      .summary-box {
+        margin-bottom: 34px;
+        padding: 17px;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        gap: 11px;
+      }
+
+      .section-number {
+        width: 36px;
+        height: 36px;
+        flex-basis: 36px;
+      }
+
       .policy-section h2 {
-        font-size: 20px;
+        font-size: 23px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition: none !important;
       }
     }
   </style>
 </head>
-
 <body>
   <header class="page-header">
     <nav class="nav" aria-label="Main navigation">
       <a href="/" class="brand">
         <span class="brand-icon" aria-hidden="true">📍</span>
-        <span>Geonnect</span>
+        <span>Geonnect<span style="color: #C2E96A;">.</span></span>
       </a>
-
-    
     </nav>
 
     <section class="hero">
-      <div class="hero-badge">🔒 Your privacy matters</div>
-
+      <div class="hero-badge">🔒 YOUR PRIVACY MATTERS</div>
       <h1>Privacy Policy</h1>
-
       <p>
         This Privacy Policy explains how Geonnect collects, uses, shares,
         stores, and protects your personal information when you use our
         application, website, and related services.
       </p>
-
       <div class="updated-date">
         Effective date: June 18, 2026 · Last updated: June 18, 2026
       </div>
@@ -414,8 +513,7 @@
 
   <main class="page-layout">
     <aside class="sidebar">
-      <h2>Policy contents</h2>
-
+      <h2 style="color: #2c3f1f;">Policy contents</h2>
       <nav aria-label="Privacy policy sections">
         <a href="#introduction">1. Introduction</a>
         <a href="#information">2. Information we collect</a>
@@ -448,24 +546,9 @@
           <span class="section-number">1</span>
           <h2>Introduction</h2>
         </div>
-
-        <p>
-          Welcome to Geonnect. In this Privacy Policy, “Geonnect,” “we,”
-          “our,” or “us” refers to the operator of the Geonnect mobile
-          application, website, and related services.
-        </p>
-
-        <p>
-          By creating an account or using Geonnect, you acknowledge that your
-          personal information may be handled as described in this Privacy
-          Policy.
-        </p>
-
-        <p>
-          This policy should be read together with our Terms and Conditions,
-          Community Guidelines, and any additional notices displayed inside the
-          Geonnect application.
-        </p>
+        <p>Welcome to Geonnect. In this Privacy Policy, “Geonnect,” “we,” “our,” or “us” refers to the operator of the Geonnect mobile application, website, and related services.</p>
+        <p>By creating an account or using Geonnect, you acknowledge that your personal information may be handled as described in this Privacy Policy.</p>
+        <p>This policy should be read together with our Terms and Conditions, Community Guidelines, and any additional notices displayed inside the Geonnect application.</p>
       </section>
 
       <section class="policy-section" id="information">
@@ -473,11 +556,8 @@
           <span class="section-number">2</span>
           <h2>Information we collect</h2>
         </div>
-
         <h3>Information you provide directly</h3>
-
         <p>We may collect information that you provide when you:</p>
-
         <ul>
           <li>Create or update a Geonnect account.</li>
           <li>Complete your profile.</li>
@@ -486,9 +566,7 @@
           <li>Contact customer support or report another user.</li>
           <li>Subscribe to a paid plan or use a promotional feature.</li>
         </ul>
-
         <p>This information may include:</p>
-
         <ul>
           <li>Your full name, username, password, and profile photo.</li>
           <li>Email address, phone number, and country code.</li>
@@ -499,12 +577,7 @@
         </ul>
 
         <h3>Information collected automatically</h3>
-
-        <p>
-          When you use Geonnect, we may automatically collect limited
-          technical and usage information, including:
-        </p>
-
+        <p>When you use Geonnect, we may automatically collect limited technical and usage information, including:</p>
         <ul>
           <li>Device type, operating system, and application version.</li>
           <li>IP address and approximate network location.</li>
@@ -520,12 +593,7 @@
           <span class="section-number">3</span>
           <h2>Location information</h2>
         </div>
-
-        <p>
-          Geonnect includes features that may require access to your device's
-          location. Depending on your permission settings, we may collect:
-        </p>
-
+        <p>Geonnect includes features that may require access to your device's location. Depending on your permission settings, we may collect:</p>
         <ul>
           <li>Your current or approximate location.</li>
           <li>Latitude and longitude coordinates.</li>
@@ -533,18 +601,9 @@
           <li>Nearby-area information used to display relevant content.</li>
           <li>Location information used for map or hot-zone features.</li>
         </ul>
-
-        <p>
-          We collect precise location information only when your device
-          permissions allow it. You can disable location access through your
-          device settings, but some Geonnect features may stop working
-          correctly.
-        </p>
-
+        <p>We collect precise location information only when your device permissions allow it. You can disable location access through your device settings, but some Geonnect features may stop working correctly.</p>
         <div class="notice">
-          Avoid sharing your home address, live location, workplace, school, or
-          other sensitive location information publicly unless you are
-          comfortable making that information visible to other users.
+          Avoid sharing your home address, live location, workplace, school, or other sensitive location information publicly unless you are comfortable making that information visible to other users.
         </div>
       </section>
 
@@ -553,9 +612,7 @@
           <span class="section-number">4</span>
           <h2>How we use your information</h2>
         </div>
-
         <p>We may use your information to:</p>
-
         <ul>
           <li>Create, maintain, and secure your account.</li>
           <li>Display your profile and content to permitted users.</li>
@@ -570,12 +627,6 @@
           <li>Respond to support requests and technical issues.</li>
           <li>Meet legal, regulatory, and safety obligations.</li>
         </ul>
-
-        <p>
-          We do not use your precise location for purposes unrelated to
-          Geonnect's location-based features without providing an additional
-          notice or obtaining permission where required.
-        </p>
       </section>
 
       <section class="policy-section" id="sharing">
@@ -583,14 +634,8 @@
           <span class="section-number">5</span>
           <h2>How we share information</h2>
         </div>
-
         <h3>Information visible to other users</h3>
-
-        <p>
-          Depending on your account settings and how you use the service, other
-          Geonnect users may see:
-        </p>
-
+        <p>Depending on your account settings and how you use the service, other Geonnect users may see:</p>
         <ul>
           <li>Your name, username, profile photo, and profile information.</li>
           <li>Your posts, photos, captions, interests, and education.</li>
@@ -600,50 +645,17 @@
         </ul>
 
         <h3>Service providers</h3>
-
-        <p>
-          We may share necessary information with trusted companies that help us
-          provide Geonnect, such as:
-        </p>
-
+        <p>We may share necessary information with trusted companies that help us provide Geonnect, such as:</p>
         <ul>
           <li>Cloud hosting and database providers.</li>
           <li>Authentication and account-security providers.</li>
           <li>Push-notification providers.</li>
           <li>Analytics, diagnostics, and crash-reporting providers.</li>
           <li>Content storage and media-delivery providers.</li>
-          <li>Payment providers when paid features are offered.</li>
         </ul>
-
-        <p>
-          These providers may process information only to perform services for
-          us and must protect it according to their agreements and applicable
-          law.
-        </p>
 
         <h3>Legal and safety reasons</h3>
-
-        <p>
-          We may preserve, access, or disclose information when reasonably
-          necessary to:
-        </p>
-
-        <ul>
-          <li>Comply with a lawful request or legal process.</li>
-          <li>Protect users, the public, Geonnect, or another party.</li>
-          <li>Investigate fraud, abuse, harassment, or security threats.</li>
-          <li>Enforce our Terms and Conditions or Community Guidelines.</li>
-          <li>Respond to an emergency involving risk of serious harm.</li>
-        </ul>
-
-        <h3>Business changes</h3>
-
-        <p>
-          Information may be transferred as part of a merger, acquisition,
-          financing, restructuring, sale of assets, or similar business
-          transaction. Where required, we will provide notice before your
-          information becomes subject to a materially different privacy policy.
-        </p>
+        <p>We may preserve, access, or disclose information when reasonably necessary to comply with legal obligations or protect users.</p>
       </section>
 
       <section class="policy-section" id="permissions">
@@ -651,42 +663,13 @@
           <span class="section-number">6</span>
           <h2>Device permissions</h2>
         </div>
-
-        <p>
-          Geonnect may request the following device permissions when needed:
-        </p>
-
+        <p>Geonnect may request the following device permissions when needed:</p>
         <ul>
-          <li>
-            <strong>Location:</strong> To provide current-location, map, nearby,
-            or location-tagging features.
-          </li>
-
-          <li>
-            <strong>Camera:</strong> To let you take a profile photo or upload
-            media directly from your device.
-          </li>
-
-          <li>
-            <strong>Photos and media:</strong> To select, upload, save, or manage
-            images and other content.
-          </li>
-
-          <li>
-            <strong>Notifications:</strong> To send friend-request, account,
-            message, safety, and service alerts.
-          </li>
-
-          <li>
-            <strong>Microphone:</strong> Only if Geonnect introduces a feature
-            that requires audio recording and you grant permission.
-          </li>
+          <li><strong>Location:</strong> To provide current-location, map, nearby, or location-tagging features.</li>
+          <li><strong>Camera:</strong> To let you take a profile photo or upload media.</li>
+          <li><strong>Photos and media:</strong> To select, upload, save, or manage images and other content.</li>
+          <li><strong>Notifications:</strong> To send friend-request, account, message, safety, and service alerts.</li>
         </ul>
-
-        <p>
-          You may change these permissions at any time through your device
-          settings. Disabling a permission may limit the related feature.
-        </p>
       </section>
 
       <section class="policy-section" id="storage">
@@ -694,33 +677,7 @@
           <span class="section-number">7</span>
           <h2>Data storage and security</h2>
         </div>
-
-        <p>
-          We use reasonable administrative, technical, and organizational
-          safeguards designed to protect information against unauthorized
-          access, loss, alteration, misuse, or disclosure.
-        </p>
-
-        <p>These measures may include:</p>
-
-        <ul>
-          <li>Encrypted communication between the application and servers.</li>
-          <li>Restricted access to production systems and user information.</li>
-          <li>Authentication and account-access controls.</li>
-          <li>Security monitoring and suspicious-activity detection.</li>
-          <li>Backups and service-recovery procedures.</li>
-        </ul>
-
-        <p>
-          No internet service or storage system can be guaranteed to be
-          completely secure. You are responsible for protecting your password,
-          device, login details, and verification codes.
-        </p>
-
-        <p>
-          Contact us immediately if you believe your account has been accessed
-          without permission.
-        </p>
+        <p>We use reasonable administrative, technical, and organizational safeguards to protect your information.</p>
       </section>
 
       <section class="policy-section" id="retention">
@@ -728,41 +685,7 @@
           <span class="section-number">8</span>
           <h2>Data retention</h2>
         </div>
-
-        <p>
-          We keep personal information only for as long as reasonably necessary
-          to provide Geonnect, meet legal requirements, resolve disputes,
-          enforce agreements, prevent abuse, and maintain security.
-        </p>
-
-        <p>
-          Retention periods may differ depending on the type of information and
-          the reason it was collected. For example:
-        </p>
-
-        <ul>
-          <li>
-            Account information may be retained while your account is active.
-          </li>
-
-          <li>
-            Deleted posts or media may remain temporarily in backups or caches.
-          </li>
-
-          <li>
-            Security and abuse records may be kept to prevent repeated misuse.
-          </li>
-
-          <li>
-            Transaction records may be retained where required by tax or
-            financial laws.
-          </li>
-        </ul>
-
-        <p>
-          We may retain de-identified or aggregated information that can no
-          longer reasonably identify you.
-        </p>
+        <p>We keep personal information only for as long as reasonably necessary to provide Geonnect and meet legal requirements.</p>
       </section>
 
       <section class="policy-section" id="choices">
@@ -770,33 +693,7 @@
           <span class="section-number">9</span>
           <h2>Your rights and choices</h2>
         </div>
-
-        <p>
-          Depending on your location and applicable law, you may have the right
-          to:
-        </p>
-
-        <ul>
-          <li>Access personal information associated with your account.</li>
-          <li>Correct inaccurate or incomplete profile information.</li>
-          <li>Request deletion of your account and personal information.</li>
-          <li>Object to or restrict certain processing activities.</li>
-          <li>Withdraw consent where processing is based on consent.</li>
-          <li>Request a portable copy of certain information.</li>
-          <li>Complain to an applicable privacy or data-protection authority.</li>
-        </ul>
-
-        <p>
-          You can manage profile details, privacy settings, blocked users, and
-          notification preferences inside Geonnect where those controls are
-          available.
-        </p>
-
-        <p>
-          We may need to verify your identity before completing a privacy
-          request. Some information may be exempt from deletion or disclosure
-          when we have a lawful reason to retain it.
-        </p>
+        <p>Depending on your location and applicable law, you may have rights to access, correct, or delete your personal information.</p>
       </section>
 
       <section class="policy-section" id="deletion">
@@ -804,43 +701,14 @@
           <span class="section-number">10</span>
           <h2>Account and data deletion</h2>
         </div>
-
-        <p>
-          You may request deletion of your Geonnect account through the
-          account settings section of the application, where available.
-        </p>
-
-        <p>You may also submit a deletion request by email:</p>
-
+        <p>You may request deletion of your Geonnect account through the account settings or by emailing:</p>
         <div class="contact-card">
           <strong>Account deletion request</strong>
-
           <div class="contact-row">
             <span>✉️</span>
-            <span>
-              Email:
-              <a href="mailto:privacy@geonnect.com">
-                privacy@geonnect.com
-              </a>
-            </span>
-          </div>
-
-          <div class="contact-row">
-            <span>📝</span>
-            <span>Subject: Geonnect Account Deletion Request</span>
+            <span>Email: <a href="mailto:privacy@geonnect.com">privacy@geonnect.com</a></span>
           </div>
         </div>
-
-        <p style="margin-top: 16px">
-          Your request should include the email address or phone number linked to
-          your account. Do not send your password or verification code.
-        </p>
-
-        <p>
-          After verification, we will delete or anonymize eligible information,
-          subject to legal, security, fraud-prevention, backup, and dispute
-          resolution requirements.
-        </p>
       </section>
 
       <section class="policy-section" id="children">
@@ -848,19 +716,7 @@
           <span class="section-number">11</span>
           <h2>Children's privacy</h2>
         </div>
-
-        <p>
-          Geonnect is not intended for children under the minimum legal age
-          required to use online services in their country. Users must meet the
-          minimum age stated in our Terms and Conditions.
-        </p>
-
-        <p>
-          We do not knowingly collect personal information from children who are
-          not legally permitted to use Geonnect. If you believe that a child
-          has created an account in violation of this policy, contact us so that
-          we can investigate and take appropriate action.
-        </p>
+        <p>Geonnect is not intended for children under the minimum legal age.</p>
       </section>
 
       <section class="policy-section" id="international">
@@ -868,17 +724,7 @@
           <span class="section-number">12</span>
           <h2>International data transfers</h2>
         </div>
-
-        <p>
-          Geonnect and its service providers may process or store information
-          in countries other than the country where you live.
-        </p>
-
-        <p>
-          Privacy and data-protection laws may differ between countries. Where
-          required, we use appropriate contractual, technical, or legal
-          safeguards for international transfers.
-        </p>
+        <p>Geonnect and its service providers may process information in countries other than where you live.</p>
       </section>
 
       <section class="policy-section" id="changes">
@@ -886,23 +732,7 @@
           <span class="section-number">13</span>
           <h2>Changes to this Privacy Policy</h2>
         </div>
-
-        <p>
-          We may update this Privacy Policy when our services, technology, legal
-          obligations, or data practices change.
-        </p>
-
-        <p>
-          When an update is made, we will revise the “Last updated” date at the
-          top of this page. For material changes, we may also provide notice
-          inside Geonnect, by email, or through another appropriate method.
-        </p>
-
-        <p>
-          Continued use of Geonnect after an updated policy becomes effective
-          means the updated policy will apply to your future use of the service,
-          subject to applicable law.
-        </p>
+        <p>We may update this Privacy Policy and will notify you of material changes.</p>
       </section>
 
       <section class="policy-section" id="contact">
@@ -910,49 +740,27 @@
           <span class="section-number">14</span>
           <h2>Contact us</h2>
         </div>
-
-        <p>
-          Contact us if you have questions, concerns, complaints, or requests
-          relating to this Privacy Policy or the handling of your personal
-          information.
-        </p>
-
         <div class="contact-card">
           <strong>Geonnect Privacy Team</strong>
-
           <div class="contact-row">
             <span>✉️</span>
-            <span>
-              Email:
-              <a href="privacy@geonnect.com">
-                privacy@geonnect.com
-              </a>
-            </span>
+            <span>Email: <a href="mailto:privacy@geonnect.com">privacy@geonnect.com</a></span>
           </div>
-
           <div class="contact-row">
             <span>🌐</span>
             <span>Website: https://geonnect.com/</span>
           </div>
-
-          <div class="contact-row">
-            <span>📍</span>
-            <span>Business address: 17-19 Speed St, Liverpool NSW 2170, Australia</span>
-          </div>
         </div>
-
-    
       </section>
     </article>
   </main>
 
   <footer>
-    © <span id="currentYear"></span> Geonnect. All rights reserved.
+    © <span id="currentYear"></span> Geonnect<span style="color:#C2E96A;">.</span> All rights reserved.
   </footer>
 
   <script>
-    document.getElementById("currentYear").textContent =
-      new Date().getFullYear();
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
